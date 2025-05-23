@@ -1,0 +1,15 @@
+- name: deploy
+  hosts: webservers
+  tasks:
+  - name: Synchronise built site to webservers
+    ansible.posix.synchronize:
+      src: public/
+      dest: /home/ec2-user/public
+
+  - name: Change ownership of public folder to nginx user
+    ansible.builtin.file:
+      path: /home/ec2-user/public
+      group: nginx
+      mode: '0755'
+      recurse: true
+    become: true
