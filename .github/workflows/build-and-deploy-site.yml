@@ -6,17 +6,52 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4.2.2
+      with:
+        submodules: recursive
       
     - name: Hugo setup
       uses: peaceiris/actions-hugo@v3.0.0
 
     - name: Build Hugo site
-      run: hugo --minify
-      working-directory: my-portfolio-site
+      run: hugo --minify -s my-portfolio-site
 
     - name: Upload built site
       uses: actions/upload-artifact@v4.6.2
       with:
-        name: public
+        name: built-site
         path: my-portfolio-site/public/
         if-no-files-found: error
+
+  Deploy-static-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4.2.2
+      
+    - name: Setup Python
+      uses: actions/setup-python@v5.6.0
+  
+    - name: Install Ansible
+      run: python3 -m pip install --user ansible
+  
+    - name: Retrieve built site artifact
+      uses: actions/download-artifact@v4.3.0
+      with:
+        name: built-site
+        path: ansible/public
+
+    - name: Set secret
+      env: 
+        ANSIBLE_HOST_PRIV_KEY: ${{ secrets.ANSIBLE_HOST_PRIVATE_KEY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$ANSIBLE_HOST_PRIV_KEY" >> ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: Disable strict host key checking
+      run: echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+        
+    - name: Run playbook
+      run: ansible-playbook -i inventory.yaml playbook.yaml
+      working-directory: ansible
+      
