@@ -1,0 +1,22 @@
+name: Build and deploy static site
+on: push
+jobs: 
+  Build-hugo-static-site:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4.2.2
+      
+    - name: Hugo setup
+      uses: peaceiris/actions-hugo@v3.0.0
+
+    - name: Build Hugo site
+      run: hugo --minify
+      working-directory: my-portfolio-site
+
+    - name: Upload built site
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: public
+        path: my-portfolio-site/public/
+        if-no-files-found: error
