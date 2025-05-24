@@ -1,5 +1,10 @@
-name: Build and deploy static site
-on: push
+name: Build and deploy static site-test
+on: 
+  push:
+    paths-ignore:
+      - 'terraform/**'
+      - '.git**'
+      - 'README.md'
 jobs: 
   Build-hugo-static-site:
     runs-on: ubuntu-latest
@@ -54,4 +59,3 @@ jobs:
     - name: Run playbook
       run: ansible-playbook -i inventory.yaml playbook.yaml
       working-directory: ansible
-      
