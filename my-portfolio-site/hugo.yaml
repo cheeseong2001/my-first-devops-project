@@ -161,25 +161,29 @@ params:
     title: "About Me"
     # image: "/images/me.png"
     content: |-
-      I am a software developer with a strong passion for DevOps and automation.
-      
-      Currently, I’m a Year 3 Information Security student at the National University of Singapore (NUS).
-      
-      Outside of school, I’m constantly learning. I’m working toward the AWS Certified Cloud Practitioner and Certified Kubernetes Administrator (CKA) certifications, and I regularly take online courses to keep up with evolving tools and workflows.
+      Hey there! I'm a third-year Information Security student at NUS, and I've been coding (with mainly Python) for almost 8 years now!
+      I am an aspiring DevOps / DevSecOps Engineer. I started my coding journey in Junior College back in 2018 and has since developed a passion for DevOps and automation.
+      I enjoy piecing together tools to automate processes as it gives me lots of satisfaction when things works.
+
+      I'm comfortable on Linux-based operating systems and familiar with tools such as Docker and Jenkins. I'm also expanding my skillset to include Terraform, Ansible and Kubernetes.
+      In fact, this portfolio site is my first personal DevOps project, and I'm using it to learn Terraform, Ansible, GitHub Actions and Nginx.
+
+      In my free time, I take up courses on Udemy too. I'm currently pursuing the Certified Kubernetes Administrator and AWS Cloud Practitioner certifications.
 
       Right now, I’m a DevOps Engineering Intern at Kiteworks (https://kiteworks.com) in Singapore. 
-      
-      This portfolio site is my first deep dive into tools like Terraform, Ansible, and GitHub Actions — and I’ve been loving every bit of it.
     skills:
       enable: true
-      title: "Technologies I've been working with recently:"
+      title: "Technologies I've worked with:"
       items:
-        - "Docker"
-        - "Jenkins"
-        - "Terraform"
-        - "Ansible"
-        - "Kubernetes"
-        - "Github Actions"
+        - "Version Control: GitHub, GitLab, Git"
+        - "Infrastructure as Code: Terraform (basic)"
+        - "Configuration Management: Ansible (basic)"
+        - "Containerisation: Docker, Kubernetes (basic)"
+        - "CI / Pipelines: Github Actions, Jenkins, GitLab CI"
+        - "Scripting & Automation: Python (mainly), Bash"
+        - "Work Management: Jira, Confluence"
+        - "Operating Systems: Linux"
+        - "Cloud: AWS"
 
   # Experience
   experience:
@@ -209,7 +213,7 @@ params:
             - Documented workflows and proof-of-concepts on Confluence, and tracked progress and tasks using Jira
 
           Technologies used:
-            - Scripting: Python, Bash
+            - Scripting: Python (mainly), Bash
             - Cloud & Infrastructure: AWS (Console & Boto3), VMware
             - Continuous Integration (CI): Jenkins, GitLab CI
             - Containerisation: Docker
@@ -318,6 +322,8 @@ params:
           - "Terraform"
           - "Ansible"
           - "GitHub Actions"
+          - "Nginx"
+          - "AWS"
 
         links:
           - icon: fab fa-github
@@ -329,7 +335,7 @@ params:
           A command-line tool built for small business owners to manage inventory efficiently. Beyond development, the project involved pitching the idea to stakeholders. I gained hands-on experience with version control, testing, and Agile practices throughout the process.
 
         badges:
-          - "Java 11"
+          - "Java"
 
         links:
           - icon: fab fa-github
