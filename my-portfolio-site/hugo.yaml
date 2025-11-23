@@ -300,11 +300,12 @@ params:
         GPA: "4.42 / 5.0"
         content: |-
           In my current study, I have learnt important concepts such as:
-            - Information Security
-            - Networking
-            - Computer Organisation
+            - Information Security 
+            - Computer Networks
+            - Computer Organisation and Operating Systems
             - Database Systems
-            - Object-Oriented Programming (OOP)
+            - Software Developmenet Lifecycle (SDLC) and Object-Oriented Programming (OOP)
+            - Blockchain and Distributed Ledger Technologies
 
         featuredLink:
           enable: false
@@ -337,6 +338,21 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - title: P2P Pawnshop System on Ethereum Blockchain
+        # image: images/portfolio.png
+        content: |
+          Built a P2P Pawnshop System on the Ethereum blockchain as part of the Blockchain course. It is a platform that aims to match willing Pledgers and Pawnbrokers without a middleman and providing short-term liquidity to Pledgers who are willing to give up their items for claim.
+
+        badges:
+          - "Ethereum"
+          - "Solidity"
+          - "Hardhat"
+          - "Chai (JavaScript assertion library)"
+
+        links:
+          - icon: fab fa-github
+            url: https://github.com/cheeseong2001/IS4302-Group4-Pawnshop
+
       - title: My portfolio site
         # image: images/portfolio.png
         content: |
@@ -401,7 +417,7 @@ params:
 
     socialNetworks:
       github: https://github.com/cheeseong2001
-      linkedin: https://www.linkedin.com/in/chee-seong-luan-6981a9249
+      linkedin: https://www.linkedin.com/in/chee-seong-luan
 
   # List pages like blogs and posts
   listPages:
