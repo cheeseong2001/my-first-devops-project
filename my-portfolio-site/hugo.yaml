@@ -150,7 +150,7 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-linkedin
-          url: https://www.linkedin.com/in/chee-seong-luan-6981a9249
+          url: https://www.linkedin.com/in/chee-seong-luan
         - icon: fab fa-github
           url: https://github.com/cheeseong2001
 
@@ -348,6 +348,19 @@ params:
           - "Solidity"
           - "Hardhat"
           - "Chai (JavaScript assertion library)"
+
+        links:
+          - icon: fab fa-github
+            url: https://github.com/cheeseong2001/IS4302-Group4-Pawnshop
+
+      - title: GameNetAPI
+        # image: images/portfolio.png
+        content: |
+          Built a transport protocol that extends from Quick UDP Internet Connections (QUIC) for a small project. This protocol is used for sending game data as per project requirement.
+
+        badges:
+          - "Python"
+          - "QUIC"
 
         links:
           - icon: fab fa-github
