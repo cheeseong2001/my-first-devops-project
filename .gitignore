@@ -6,3 +6,5 @@ terraform/terraform.tfstate*
 # Hugo files
 public/
 resources/
+
+.DS_Store
